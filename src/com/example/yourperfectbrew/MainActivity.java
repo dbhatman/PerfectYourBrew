@@ -1,6 +1,7 @@
 package com.example.yourperfectbrew;
 
 
+import com.example.helloworld.QuantityActivity;
 import com.example.helloworld.R;
 
 import android.app.Activity;
@@ -9,9 +10,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
 
 public class MainActivity extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +44,10 @@ public class MainActivity extends Activity {
     
     /** Called when the user clicks the French Press button */
     public void open_french_press(View view) {
-        // Do something in response to button
-    	Intent intent = new Intent(this, Display_French_Press.class);
+        // Do something in response to button    	
+    	Intent intent = new Intent(this, QuantityActivity.class);
+    	
+    	startActivity(intent);
     }
     
     /** Called when the user clicks the Aeropress button */

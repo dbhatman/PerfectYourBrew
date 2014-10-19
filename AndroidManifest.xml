@@ -22,6 +22,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".QuantityActivity"
+            android:label="@string/title_activity_quantity"
+            android:parentActivityName="com.example.yourperfectbrew.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.yourperfectbrew.MainActivity" />
+        </activity>
+        <activity
+            android:name=".BrewActivity"
+            android:label="@string/title_activity_brew"
+            android:parentActivityName=".QuantityActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.helloworld.QuantityActivity" />
+        </activity>
     </application>
 
 </manifest>

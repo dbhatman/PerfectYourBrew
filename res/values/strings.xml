@@ -9,6 +9,7 @@
     <string name="brew_method_aeropress">Aeropress</string>
     <string name="brew_method_pour_over">Pour Over</string>
     <string name="brew_method_iced_coffee">Iced Coffee</string>
-    
+    <string name="title_activity_quantity">QuantityActivity</string>
+    <string name="title_activity_brew">BrewActivity</string>
 
 </resources>

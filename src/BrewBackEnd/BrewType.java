@@ -1,4 +1,4 @@
-package com.example.yourperfectbrew;
+package BrewBackEnd;
 
 public enum BrewType {
 	FRENCH_PRESS,
