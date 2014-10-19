@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HelloWorld</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_settingsasdf">Settingsasdf</string>
+    <string name="brew_method_french_press">French Press</string>
+    <string name="brew_method_aeropress">Aeropress</string>
+    <string name="brew_method_pour_over">Pour Over</string>
+    <string name="brew_method_iced_coffee">Iced Coffee</string>
+    
+
+</resources>
