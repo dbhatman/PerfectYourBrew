@@ -1,9 +1,9 @@
 package com.example.yourperfectbrew;
 
 
-import com.example.helloworld.QuantityActivity;
-import com.example.helloworld.R;
 
+import BrewBackEnd.BrewParameters;
+import BrewBackEnd.BrewType;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +14,7 @@ import android.widget.EditText;
 
 
 public class MainActivity extends Activity {
+	public final static String BREW_PARAMETERS = "com.example.perfectyourbrew.BREW";
 
 
     @Override
@@ -46,7 +47,8 @@ public class MainActivity extends Activity {
     public void open_french_press(View view) {
         // Do something in response to button    	
     	Intent intent = new Intent(this, QuantityActivity.class);
-    	
+    	BrewParameters brew = new BrewParameters(BrewType.FRENCH_PRESS);
+    	intent.putExtra(BREW_PARAMETERS,brew);
     	startActivity(intent);
     }
     

@@ -1,6 +1,13 @@
-package com.example.helloworld;
+package com.example.yourperfectbrew;
 
 
+import com.example.yourperfectbrew.R;
+import com.example.yourperfectbrew.R.id;
+import com.example.yourperfectbrew.R.layout;
+import com.example.yourperfectbrew.R.menu;
+
+import BrewBackEnd.BrewParameters;
+import BrewBackEnd.BrewType;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,12 +18,16 @@ import android.widget.EditText;
 
 
 public class QuantityActivity extends Activity {
-	public final static String EXTRA_MESSAGE = "com.example.helloworld.MESSAGE";
-
+	public final static String BREW_PARAMETERS = "com.example.perfectyourbrew.BREW";
+	private BrewParameters brew;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		Intent intent = getIntent();
+		brew = intent.getParcelableExtra(BREW_PARAMETERS);
+		
 		setContentView(R.layout.activity_quantity);
 	}
 	
@@ -32,11 +43,14 @@ public class QuantityActivity extends Activity {
 	public void sendMessage(View view) {
 	    Intent intent = new Intent(this, BrewActivity.class);
 	    EditText editText = (EditText) findViewById(R.id.editText1);
+	    
 	    String message = editText.getText().toString();
-	    intent.putExtra(EXTRA_MESSAGE, message);
+	    brew.setAmountVolume(Double.parseDouble(message));
+	    intent.putExtra(BREW_PARAMETERS, brew);
 	    startActivity(intent);
 	}
 	
+	//TODO - replace settings menu with side bar
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will

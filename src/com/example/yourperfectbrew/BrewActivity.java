@@ -1,5 +1,7 @@
-package com.example.helloworld;
+package com.example.yourperfectbrew;
 
+
+import BrewBackEnd.BrewParameters;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,20 +10,22 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class BrewActivity extends Activity {
-
+	public final static String BREW_PARAMETERS = "com.example.perfectyourbrew.BREW";
+	private BrewParameters brew;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_brew);
 		
 	    // Get the message from the intent
+	    
 	    Intent intent = getIntent();
-	    String message = intent.getStringExtra(QuantityActivity.EXTRA_MESSAGE);
-
+		brew = intent.getParcelableExtra(BREW_PARAMETERS);
 	    // Create the text view
 	    TextView textView = new TextView(this);
 	    textView.setTextSize(32);
-	    textView.setText(message);
+	    textView.setText(brew.getStyle().toString());
 
 	    // Set the text view as the activity layout
 	    setContentView(textView);

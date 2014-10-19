@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.helloworld"
+    package="com.example.yourperfectbrew"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".QuantityActivity"
+            android:name="com.example.yourperfectbrew.QuantityActivity"
             android:label="@string/title_activity_quantity"
             android:parentActivityName="com.example.yourperfectbrew.MainActivity" >
             <meta-data
@@ -31,12 +31,12 @@
                 android:value="com.example.yourperfectbrew.MainActivity" />
         </activity>
         <activity
-            android:name=".BrewActivity"
+            android:name="com.example.yourperfectbrew.BrewActivity"
             android:label="@string/title_activity_brew"
-            android:parentActivityName=".QuantityActivity" >
+            android:parentActivityName="com.example.yourperfectbrew.QuantityActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.helloworld.QuantityActivity" />
+                android:value="com.example.yourperfectbrew.QuantityActivity" />
         </activity>
     </application>
 
