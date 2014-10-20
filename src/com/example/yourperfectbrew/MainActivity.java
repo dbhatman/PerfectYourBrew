@@ -48,6 +48,7 @@ public class MainActivity extends Activity {
         // Do something in response to button    	
     	Intent intent = new Intent(this, QuantityActivity.class);
     	BrewParameters brew = new BrewParameters(BrewType.FRENCH_PRESS);
+    	brew.setRatio(16.0/1.0);
     	intent.putExtra(BREW_PARAMETERS,brew);
     	startActivity(intent);
     }
