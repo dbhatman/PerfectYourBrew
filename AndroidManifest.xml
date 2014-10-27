@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.yourperfectbrew"
+    package="com.example.perfectyourbrew"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.yourperfectbrew.MainActivity"
+            android:name="com.example.perfectyourbrew.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,20 +23,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.yourperfectbrew.QuantityActivity"
+            android:name="com.example.perfectyourbrew.QuantityActivity"
             android:label="@string/title_activity_quantity"
-            android:parentActivityName="com.example.yourperfectbrew.MainActivity" >
+            android:parentActivityName="com.example.perfectyourbrew.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.yourperfectbrew.MainActivity" />
+                android:value="com.example.perfectyourbrew.MainActivity" />
         </activity>
         <activity
-            android:name="com.example.yourperfectbrew.BrewActivity"
+            android:name="com.example.perfectyourbrew.BrewActivity"
             android:label="@string/title_activity_brew"
-            android:parentActivityName="com.example.yourperfectbrew.QuantityActivity" >
+            android:parentActivityName="com.example.perfectyourbrew.QuantityActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.yourperfectbrew.QuantityActivity" />
+                android:value="com.example.perfectyourbrew.QuantityActivity" />
         </activity>
     </application>
 
